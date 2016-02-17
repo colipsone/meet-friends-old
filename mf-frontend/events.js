@@ -4,18 +4,28 @@
 'use strict';
 
 var MOKED_DATA = [
-    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg'}},
-    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A'}},
-    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png'}},
-    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg'}},
-    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A'}},
-    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png'}},
-    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg'}},
-    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A'}},
-    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png'}},
+    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    {userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
 
 ];
 var REQUEST_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json';
+var icon_plus = 'http://files.softicons.com/download/toolbar-icons/black-wireframe-toolbar-icons-by-gentleface/png/32/round_plus.png';
 
 import React, {
     AppRegistry,
@@ -25,7 +35,9 @@ import React, {
     Text,
     View,
     ProgressBarAndroid,
-    ListView
+    ListView,
+    ScrollView,
+    TouchableHighlight
 } from 'react-native';
 
 var Events = new React.createClass({
@@ -60,53 +72,64 @@ var Events = new React.createClass({
         }
 
         return (
-            <ListView
-                dataSource={this.state.dataSource}
-                renderRow={this.renderEventList}
-                style={styles.listView}
-            />
+            <View style={styles.scrollView}>
+                <View style={styles.topContainer} >
+                    <TouchableHighlight style={styles.button_left}>
+                        <Text style={styles.button_text_left}>Event List</Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight style={styles.button_right}>
+                        <Text style={styles.button_text_right}>Calendar</Text>
+                    </TouchableHighlight>
+                </View>
+                <ScrollView style={styles.scrollViewTop}>
+                    <Text style={styles.eventTitle}>Nearest Events</Text>
+                    <ListView
+                        dataSource={this.state.dataSource}
+                        renderRow={this.renderEventList}
+                        style={styles.listView}
+                    />
+                </ScrollView>
+            </View>
         )
-            ;
+
     },
     renderEventList(event) {
         return (
-            <View style={styles.container}>
-                <Image
-                    source={{uri: event.userImage.thumbnail}}
-                    style={styles.thumbnail}
-                />
-                <View style={styles.leftContainer}>
-                    <Text style={styles.userName}>
-                        {event.userName}
-                    </Text>
-                    <Text style={styles.title}>
-                        {event.title}
-                    </Text>
-                    <Text style={styles.description}>
-                        {event.description}
-                    </Text>
-
-                    <Text style={styles.partyType}>
-                        {event.partyType}
-                    </Text>
-                </View>
-                <View style={styles.rightContainer}>
-                    <Text style={styles.date}>
-                        {event.date}
-                    </Text>
-                    <View style={styles.iconRow}>
-                        <Image
-                            source={{uri: event.userImage.thumbnail}}
-                            style={styles.icon}
-                        />
-                        <Image
-                            source={{uri: event.userImage.thumbnail}}
-                            style={styles.icon}
-                        />
+                <View style={styles.container}>
+                    <Image
+                        source={{uri: event.userImage.thumbnail}}
+                        style={styles.thumbnail}
+                    />
+                    <View style={styles.leftContainer}>
+                        <Text style={styles.userName}>
+                            {event.userName}
+                        </Text>
+                        <Text style={styles.title}>
+                            {event.title}
+                        </Text>
+                        <Text style={styles.description}>
+                            {event.description}
+                        </Text>
+                        <Text style={styles.partyType}>
+                            {event.partyType}
+                        </Text>
+                    </View>
+                    <View style={styles.rightContainer}>
+                        <Text style={styles.date}>
+                            {event.date}
+                        </Text>
+                        <View style={styles.iconRow}>
+                            <Image
+                                source={{uri: event.userImage.starIcon}}
+                                style={styles.icon}
+                            />
+                            <Image
+                                source={{uri: icon_plus}}
+                                style={styles.icon}
+                            />
+                        </View>
                     </View>
                 </View>
-
-            </View>
         )
     },
     renderLoadingView() {
@@ -181,14 +204,55 @@ const styles = StyleSheet.create({
         height: 15,
         borderRadius: 30,
         marginTop: 10,
-        marginLeft: 10,
+        marginLeft: 10
     },
     iconRow : {
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: 'row'
     },
     rightContainer : {
         flex: 1
+    },
+    eventTitle : {
+        backgroundColor: '#f1f1f1',
+        textAlign : 'center',
+        fontSize: 30,
+        color: "#464646"
+    },
+    topContainer : {
+        marginTop: 10,
+        marginLeft : 20,
+        marginBottom : 10,
+        marginRight : 20,
+        height:30,
+        flexDirection: 'row',
+    },
+    button_right : {
+        backgroundColor: '#f7f7f7',
+        flex: 1,
+        borderRadius: 4,
+        paddingTop: 5,
+    },
+    button_left : {
+        backgroundColor: '#0aa494',
+        flex: 1,
+        borderRadius: 4,
+        paddingTop: 5,
+    },
+    button_text_left : {
+        textAlign : 'center',
+        color : 'white'
+    },
+    button_text_right : {
+        textAlign : 'center',
+    },
+    scrollViewTop : {
+
+
+    },
+    scrollView : {
+        flex : 1,
+        backgroundColor: '#0aa494',
     }
 
 });
