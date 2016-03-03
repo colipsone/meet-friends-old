@@ -15,15 +15,30 @@ import React, {
   Text,
   View,
   ProgressBarAndroid,
-  ListView
+  ListView,
+  Navigator
 } from 'react-native';
 
-var Events = require('./events')
+var Events = require('./events');
+var EventDetails = require('./event_details');
 
 var NewProject = React.createClass({
+
+  _renderScene(route, navigator) {
+     if (route.view_id === 1) {
+         return <Events navigator={navigator}/>
+     } else if (route.view_id === 2) {
+         return <EventDetails navigator={navigator} event_id={route.event_id}/>
+     }
+  },
   render : function() {
       return (
-          <Events />
+          <Navigator
+            initialRoute={{view_id: 1}}
+            renderScene={this._renderScene}
+          />
+          //<Events />
+          //<EventDetails />
       )
     }
 });
