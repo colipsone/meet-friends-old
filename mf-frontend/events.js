@@ -40,6 +40,9 @@ import React, {
     TouchableHighlight
 } from 'react-native';
 
+//var EventsService = require('./services/eventsService');
+//var eventsService = new EventsService();
+
 var Events = new React.createClass({
     getInitialState: function() {
         return {
@@ -50,18 +53,24 @@ var Events = new React.createClass({
         }
     },
     fetchData: function() {
-        //fetch(REQUEST_URL)
-        //    .then((response) => response.json())
-        //    .then((responseData) => {
-        //        this.setState({
-        //            dataSource: this.state.dataSource.cloneWithRows(responseData.movies),
-        //            loaded : true
-        //        }).done();
-        //    })
+        /*eventsService.getEvents(function(events){
+            this.setState({
+                dataSource: this.state.dataSource.cloneWithRows(events),
+                loaded : true
+            })
+        });*/
+        /*fetch(REQUEST_URL)
+            .then((response) => response.json())
+            .then((responseData) => {
+                this.setState({
+                    dataSource: this.state.dataSource.cloneWithRows(responseData.movies),
+                    loaded : true
+                }).done();
+            })*/
         this.setState({
             dataSource: this.state.dataSource.cloneWithRows(MOKED_DATA),
             loaded : true
-        })
+        });
     },
     componentDidMount: function() {
         this.fetchData();
