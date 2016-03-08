@@ -53,12 +53,12 @@ var Events = new React.createClass({
         }
     },
     fetchData: function() {
-        /*eventsService.getEvents(function(events){
-            this.setState({
-                dataSource: this.state.dataSource.cloneWithRows(events),
-                loaded : true
-            })
-        });*/
+        //eventsService.getEvents(function(events){
+        //    this.setState({
+        //        dataSource: this.state.dataSource.cloneWithRows(events),
+        //        loaded : true
+        //    })
+        //});
         /*fetch(REQUEST_URL)
             .then((response) => response.json())
             .then((responseData) => {

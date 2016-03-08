@@ -21,6 +21,8 @@ import React, {
 
 var Events = require('./events');
 var EventDetails = require('./event_details');
+var ScrollableTabView = require('react-native-scrollable-tab-view');
+
 
 var NewProject = React.createClass({
 
@@ -33,10 +35,18 @@ var NewProject = React.createClass({
   },
   render : function() {
       return (
-          <Navigator
-            initialRoute={{view_id: 1}}
-            renderScene={this._renderScene}
-          />
+
+          <ScrollableTabView tabBarPosition={"bottom"}>
+              <Navigator tabLabel="Event List"
+                  initialRoute={{view_id: 1}}
+                  renderScene={this._renderScene}
+              />
+              <Text tabLabel="Friends" >t</Text>
+              <Text tabLabel="Main" >t</Text>
+              <Text tabLabel="Notif" >t</Text>
+              <Text tabLabel="Account" >t</Text>
+
+          </ScrollableTabView>
           //<Events />
           //<EventDetails />
       )
