@@ -27,13 +27,7 @@
     "user": {
       "type": "belongsTo",
       "model": "user",
-      "foreignKey": "userId"
-    },
-    "participants": {
-      "type": "hasMany",
-      "model": "user",
-      "foreignKey": "userId",
-      "through": "eventParticipant"
+      "foreignKey": ""
     }
   },
   "acls": [],
