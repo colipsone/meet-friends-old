@@ -22,11 +22,26 @@ import React, {
 var Events = require('./events');
 var EventDetails = require('./event_details');
 var ScrollableTabView = require('react-native-scrollable-tab-view');
+import FacebookTabBar from './FacebookTabBar';
+import Icon from 'react-native-vector-icons/Ionicons';
+var CalendarPicker = require('react-native-calendar-picker');
 
 
 var NewProject = React.createClass({
 
-  _renderScene(route, navigator) {
+    getInitialState: function() {
+        return {
+            date: new Date(),
+            eventArray: [0, 1, 2, 6, 8]
+        };
+    },
+    onDateChange: function(date) {
+        this.setState({ date: date });
+        console.log(date)
+
+    },
+
+    _renderScene(route, navigator) {
      if (route.view_id === 1) {
          return <Events navigator={navigator}/>
      } else if (route.view_id === 2) {
@@ -36,16 +51,19 @@ var NewProject = React.createClass({
   render : function() {
       return (
 
-          <ScrollableTabView tabBarPosition={"bottom"}>
-              <Navigator tabLabel="Event List"
+          <ScrollableTabView tabBarPosition={"bottom"} renderTabBar={() => <FacebookTabBar someProp={'here'} />}>
+              <Navigator tabLabel="bag"
                   initialRoute={{view_id: 1}}
                   renderScene={this._renderScene}
               />
-              <Text tabLabel="Friends" >t</Text>
-              <Text tabLabel="Main" >t</Text>
-              <Text tabLabel="Notif" >t</Text>
-              <Text tabLabel="Account" >t</Text>
-
+              <Text tabLabel="ios-world" >t</Text>
+              <Text tabLabel="alert" >t</Text>
+              <Text tabLabel="android-apps" >t</Text>
+              <CalendarPicker tabLabel="android-walk"
+                  selectedDate={this.state.date}
+                  onDateChange={this.onDateChange}
+                  eventDays={this.state.eventArray}
+              />
           </ScrollableTabView>
           //<Events />
           //<EventDetails />
