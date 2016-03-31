@@ -4,10 +4,10 @@
     "connector": "memory"
   },
   "mongoDs": {
-    "name": "mongoDs",
-    "connector": "mongodb",
-	"host": "localhost",
+    "host": "localhost",
     "port": 27017,
-    "database": "meet-friends"
+    "database": "meet-friends",
+    "name": "mongoDs",
+    "connector": "mongodb"
   }
 }

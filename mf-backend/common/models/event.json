@@ -20,6 +20,14 @@
     },
     "description": {
       "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],

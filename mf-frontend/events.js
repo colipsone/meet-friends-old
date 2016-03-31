@@ -106,7 +106,7 @@ var Events = new React.createClass({
         return (
             <TouchableHighlight
                 onPress={() => {this.props.navigator.push({
-                    event_id : event.event_id,
+                    event_id : event.id,
                     view_id : 2
                 })}}>
                 <View style={styles.container}>
@@ -116,7 +116,7 @@ var Events = new React.createClass({
                     />
                     <View style={styles.leftContainer}>
                         <Text style={styles.userName}>
-                            {event.userName}
+                            {event.user.username}
                         </Text>
                         <Text style={styles.title}>
                             {event.title}
@@ -125,12 +125,12 @@ var Events = new React.createClass({
                             {event.description}
                         </Text>
                         <Text style={styles.partyType}>
-                            {event.partyType}
+                            {event.type}
                         </Text>
                     </View>
                     <View style={styles.rightContainer}>
                         <Text style={styles.date}>
-                            {event.date}
+                            {event.from}
                         </Text>
                         <View style={styles.iconRow}>
                             <Image
