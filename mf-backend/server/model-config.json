@@ -40,5 +40,9 @@
   "eventParticipant": {
     "dataSource": "mongoDs",
     "public": true
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": true
   }
 }
