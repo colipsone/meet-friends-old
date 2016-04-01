@@ -40,8 +40,8 @@ import React, {
     TouchableHighlight
 } from 'react-native';
 
-//var EventsService = require('./services/eventsService');
-//var eventsService = new EventsService();
+var EventsService = require('./services/eventsService');
+var eventsService = new EventsService();
 
 var Events = new React.createClass({
     getInitialState: function() {
@@ -53,23 +53,11 @@ var Events = new React.createClass({
         }
     },
     fetchData: function() {
-        //eventsService.getEvents(function(events){
-        //    this.setState({
-        //        dataSource: this.state.dataSource.cloneWithRows(events),
-        //        loaded : true
-        //    })
-        //});
-        /*fetch(REQUEST_URL)
-            .then((response) => response.json())
-            .then((responseData) => {
-                this.setState({
-                    dataSource: this.state.dataSource.cloneWithRows(responseData.movies),
-                    loaded : true
-                }).done();
-            })*/
-        this.setState({
-            dataSource: this.state.dataSource.cloneWithRows(MOKED_DATA),
-            loaded : true
+        eventsService.getEvents((events) => {
+            this.setState({
+                dataSource: this.state.dataSource.cloneWithRows(events),
+                loaded : true
+            });
         });
     },
     componentDidMount: function() {
@@ -111,7 +99,7 @@ var Events = new React.createClass({
                 })}}>
                 <View style={styles.container}>
                     <Image
-                        source={{uri: event.userImage.thumbnail}}
+                        source={{uri: event.user.photoUrl}}
                         style={styles.thumbnail}
                     />
                     <View style={styles.leftContainer}>
@@ -134,7 +122,7 @@ var Events = new React.createClass({
                         </Text>
                         <View style={styles.iconRow}>
                             <Image
-                                source={{uri: event.userImage.starIcon}}
+                                source={{uri: event.user.starIcon}}
                                 style={styles.icon}
                             />
                             <Image

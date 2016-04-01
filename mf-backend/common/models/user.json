@@ -16,6 +16,10 @@
     "login": {
       "type": "string",
       "required": true
+    },
+    "photoUrl": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],

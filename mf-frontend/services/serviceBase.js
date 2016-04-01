@@ -2,16 +2,16 @@ let SettingsProvider = require('../providers/settingsProvider');
 
 class serviceBase {
     constructor() {
-        let settingsProvider = new SettingsProvider();
-        let baseUrl = settingsProvider.getServerBaseUrl();
-        let request = require('request');
-        this._request = request.defaults({
-            baseUrl: baseUrl
-        });
+        this._settingsProvider = new SettingsProvider();
+        this._serverApiBaseUrl = settingsProvider.serverApiBaseUrl;
     }
 
-    get request() {
-        return this._request;
+    get serverApiBaseUrl {
+        return this._serverApiBaseUrl;
+    }
+
+    handleError(error) {
+        console.log("Request to server failed! Error details: " + error);
     }
 }
 
