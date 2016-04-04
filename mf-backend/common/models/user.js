@@ -1,4 +1,4 @@
-module.exports = function(User) {
+module.exports = function (User) {
 	User.getNearestEvents = function(userId, callBack) {
 		User.findById(userId, {
 			include: {
@@ -9,8 +9,7 @@ module.exports = function(User) {
 						description: true,
 						type: true,
 						from: true,
-						id: true,
-						userId: false
+						id: true
 					}
 				}
 			}

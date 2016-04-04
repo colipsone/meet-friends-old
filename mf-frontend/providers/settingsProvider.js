@@ -1,10 +1,10 @@
 /**
  * Created by colipsone on 3/1/2016.
  */
-class settingsProvider {
+class SettingsProvider {
     get serverApiBaseUrl() {
-        return "http://localhost:3000/api";
+        return 'http://192.168.0.103:3000/api';
     }
 }
 
-module.exports = settingsProvider;
+module.exports = SettingsProvider;

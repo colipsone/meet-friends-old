@@ -99,12 +99,12 @@ var Events = new React.createClass({
                 })}}>
                 <View style={styles.container}>
                     <Image
-                        source={{uri: event.user.photoUrl}}
+                source={{uri: eventsService.serverApiBaseUrl + event.photoUrl}}
                         style={styles.thumbnail}
                     />
                     <View style={styles.leftContainer}>
                         <Text style={styles.userName}>
-                            {event.user.username}
+                            {event.username}
                         </Text>
                         <Text style={styles.title}>
                             {event.title}
@@ -122,7 +122,7 @@ var Events = new React.createClass({
                         </Text>
                         <View style={styles.iconRow}>
                             <Image
-                                source={{uri: event.user.starIcon}}
+                        source={{uri: eventsService.serverApiBaseUrl + event.photoUrl}}
                                 style={styles.icon}
                             />
                             <Image
