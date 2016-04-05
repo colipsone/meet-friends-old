@@ -4,24 +4,24 @@
 'use strict';
 
 var MOKED_DATA = [
-    {event_id: 1, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 2, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 3, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 4, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 5, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 6, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 7, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 8, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 9, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 10, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 11, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 12, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 13, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 14, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 15, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 16, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 17, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
-    {event_id: 18, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png'}},
+    { event_id: 1, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 2, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 3, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 4, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 5, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 6, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 7, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 8, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 9, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 10, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 11, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 12, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 13, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 14, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 15, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 16, userName:'BordyArt(Artyom)', title: 'My Happy Birdthday', description: 'Lets pray in church together', partyType: 'Party', date: 'Today 22:00', favorite: 'true', userImage: {thumbnail:'http://i.imgur.com/UePbdph.jpg', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 17, userName:'Yegor Babosiuk', title: 'Party na hate', description: 'I want some crazy party with girls', partyType: 'Party', date: 'Tommorow 20:00', favorite: 'true', userImage: {thumbnail:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaRRe4I7cwuC12R0zkUNP71rpA7vqwVvR5yDkXWyoA_1d8tyd9A', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
+    { event_id: 18, userName:'Kolya', title: 'Play games with friendsy', description: 'Lets play mortal combat', partyType: 'Games', date: '25.09.2016', favorite: 'true', userImage: {thumbnail:'http://ndl.mgccw.com/mu3/app/20150810/04/1439162148803/icon/icon_xl.png', starIcon:'http://files.softicons.com/download/internet-cons/emotion-icons-by-yellow-icon/png/128/star.png' }},
 
 ];
 var REQUEST_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json';
@@ -43,7 +43,7 @@ import React, {
 //var EventsService = require('./services/eventsService');
 //var eventsService = new EventsService();
 
-var Events = new React.createClass({
+var Events = React.createClass({
     getInitialState: function() {
         return {
             dataSource: new ListView.DataSource({
@@ -106,7 +106,7 @@ var Events = new React.createClass({
         return (
             <TouchableHighlight
                 onPress={() => {this.props.navigator.push({
-                    event_id : event.id,
+                    event_id : event.event_id,
                     view_id : 2
                 })}}>
                 <View style={styles.container}>
@@ -116,7 +116,7 @@ var Events = new React.createClass({
                     />
                     <View style={styles.leftContainer}>
                         <Text style={styles.userName}>
-                            {event.user.username}
+                            {event.userName}
                         </Text>
                         <Text style={styles.title}>
                             {event.title}
@@ -125,12 +125,12 @@ var Events = new React.createClass({
                             {event.description}
                         </Text>
                         <Text style={styles.partyType}>
-                            {event.type}
+                            {event.partyType}
                         </Text>
                     </View>
                     <View style={styles.rightContainer}>
                         <Text style={styles.date}>
-                            {event.from}
+                            {event.date}
                         </Text>
                         <View style={styles.iconRow}>
                             <Image

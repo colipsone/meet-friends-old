@@ -13,32 +13,35 @@
       "./mixins"
     ]
   },
+  "User": {
+    "dataSource": "db"
+  },
   "AccessToken": {
-    "dataSource": "mongoDs",
+    "dataSource": "db",
     "public": false
   },
   "ACL": {
-    "dataSource": "mongoDs",
+    "dataSource": "db",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "mongoDs",
+    "dataSource": "db",
     "public": false
   },
   "Role": {
-    "dataSource": "mongoDs",
+    "dataSource": "db",
     "public": false
   },
   "event": {
-    "dataSource": "mongoDs",
+    "dataSource": "db",
     "public": true
   },
   "user": {
-    "dataSource": "mongoDs",
+    "dataSource": "db",
     "public": true
   },
   "eventParticipant": {
-    "dataSource": "mongoDs",
+    "dataSource": "db",
     "public": true
   }
 }
