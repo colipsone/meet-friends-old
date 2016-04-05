@@ -17,7 +17,7 @@ var styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingBottom: 10,
+        paddingBottom: 10
     },
     tabs: {
         height: 45,
@@ -27,13 +27,13 @@ var styles = StyleSheet.create({
         borderTopWidth: 0,
         borderLeftWidth: 0,
         borderRightWidth: 0,
-        borderBottomColor: 'rgba(0,0,0,0.05)',
+        borderBottomColor: 'rgba(0,0,0,0.05)'
     },
     icon: {
         position: 'absolute',
         top: 0,
-        left: 20,
-    },
+        left: 20
+    }
 });
 
 var FacebookTabBar = React.createClass({
@@ -60,12 +60,12 @@ var FacebookTabBar = React.createClass({
     },
 
     componentDidMount() {
-        this.setAnimationValue({value: this.props.activeTab});
+        this.setAnimationValue({ value: this.props.activeTab });
         this._listener = this.props.scrollValue.addListener(this.setAnimationValue);
 
     },
 
-    setAnimationValue({value}) {
+    setAnimationValue({ value }) {
         var currentPage = this.props.activeTab;
 
         this.unselectedTabIcons.forEach((icon, i) => {
@@ -101,8 +101,8 @@ var FacebookTabBar = React.createClass({
 
         return (
             <View>
-                <View style={[styles.tabs, this.props.style, ]}>
-                    {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
+                <View style={[styles.tabs, this.props.style]}>
+                    {this.props.tabs.map((tab, item) => this.renderTabOption(tab, item))}
                 </View>
                 <Animated.View style={[tabUnderlineStyle, {left}]} />
             </View>

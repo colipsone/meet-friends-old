@@ -1,17 +1,12 @@
-var MOKED_MOVIES_DATA = [
-    {title: 'Title', year: '2015', posters: {thumbnail:'http://i.imgur.com/UePbdph.jpg'}}
-];
-var REQUEST_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json';
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict';
+
+/*eslint-disable no-unused-vars*/
+
 import React, {
   AppRegistry,
   Component,
   Image,
-  StyleSheet,
+  // StyleSheet,
   Text,
   View,
   ProgressBarAndroid,
@@ -19,13 +14,15 @@ import React, {
   Navigator
 } from 'react-native';
 
-var Events = require('./events');
-var EventDetails = require('./event_details');
-var ScrollableTabView = require('react-native-scrollable-tab-view');
+import Events from './events';
+import EventDetails from './event_details';
+import ScrollableTabView from 'react-native-scrollable-tab-view';
 import FacebookTabBar from './FacebookTabBar';
 import Icon from 'react-native-vector-icons/Ionicons';
-var CalendarPicker = require('react-native-calendar-picker');
+import CalendarPicker from 'react-native-calendar-picker';
+import AuthorizationMenu from './auth_menu';
 
+/*eslint-enable no-unused-vars*/
 
 var NewProject = React.createClass({
 
@@ -37,12 +34,12 @@ var NewProject = React.createClass({
     },
     onDateChange: function(date) {
         this.setState({ date: date });
-        console.log(date)
-
     },
 
     _renderScene(route, navigator) {
-     if (route.view_id === 1) {
+     if (route.view_id === 0) {
+         return <AuthorizationMenu navigator={navigator}/>
+     } else if (route.view_id === 1) {
          return <Events navigator={navigator}/>
      } else if (route.view_id === 2) {
          return <EventDetails navigator={navigator} event_id={route.event_id}/>
@@ -51,9 +48,9 @@ var NewProject = React.createClass({
   render : function() {
       return (
 
-          <ScrollableTabView tabBarPosition={"bottom"} renderTabBar={() => <FacebookTabBar someProp={'here'} />}>
+           <ScrollableTabView tabBarPosition={"bottom"} renderTabBar={() => <FacebookTabBar someProp={'here'} />}>
               <Navigator tabLabel="bag"
-                  initialRoute={{view_id: 1}}
+                  initialRoute={{ view_id: 0 }}
                   renderScene={this._renderScene}
               />
               <Text tabLabel="ios-world" >t</Text>
@@ -64,39 +61,37 @@ var NewProject = React.createClass({
                   onDateChange={this.onDateChange}
                   eventDays={this.state.eventArray}
               />
-          </ScrollableTabView>
-          //<Events />
-          //<EventDetails />
+           </ScrollableTabView>
       )
     }
 });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  spinner: {
-      opacity: 1
-  },
-  thumbnail: {
-      width: 53,
-      height: 81
-  },
-    rightContainer: {
-        flex: 1
-    },
-    title: {
-        fontSize: 20,
-        marginBottom: 8,
-        textAlign: 'center'
-    },
-    year: {
-        textAlign: 'center'
-    }
-});
+// const styles = StyleSheet.create({
+//     container: {
+//     flex: 1,
+//     flexDirection: 'row',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     backgroundColor: '#F5FCFF'
+//   },
+//   spinner: {
+//       opacity: 1
+//   },
+//   thumbnail: {
+//       width: 53,
+//       height: 81
+//   },
+//     rightContainer: {
+//         flex: 1
+//     },
+//     title: {
+//         fontSize: 20,
+//         marginBottom: 8,
+//         textAlign: 'center'
+//     },
+//     year: {
+//         textAlign: 'center'
+//     }
+// });
 
 AppRegistry.registerComponent('NewProject', () => NewProject);
