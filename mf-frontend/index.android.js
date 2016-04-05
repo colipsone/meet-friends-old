@@ -6,7 +6,6 @@ import React, {
   AppRegistry,
   Component,
   Image,
-  // StyleSheet,
   Text,
   View,
   ProgressBarAndroid,
@@ -14,13 +13,13 @@ import React, {
   Navigator
 } from 'react-native';
 
-import Events from './events';
-import EventDetails from './event_details';
+import Events from './components/events';
+import EventDetails from './components/event_details';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import FacebookTabBar from './FacebookTabBar';
+import FacebookTabBar from './components/FacebookTabBar';
 import Icon from 'react-native-vector-icons/Ionicons';
 import CalendarPicker from 'react-native-calendar-picker';
-import AuthorizationMenu from './auth_menu';
+import AuthorizationMenu from './components/auth_menu';
 
 /*eslint-enable no-unused-vars*/
 
@@ -64,33 +63,5 @@ var NewProject = React.createClass({
       )
     }
 });
-
-// const styles = StyleSheet.create({
-//     container: {
-//     flex: 1,
-//     flexDirection: 'row',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF'
-//   },
-//   spinner: {
-//       opacity: 1
-//   },
-//   thumbnail: {
-//       width: 53,
-//       height: 81
-//   },
-//     rightContainer: {
-//         flex: 1
-//     },
-//     title: {
-//         fontSize: 20,
-//         marginBottom: 8,
-//         textAlign: 'center'
-//     },
-//     year: {
-//         textAlign: 'center'
-//     }
-// });
 
 AppRegistry.registerComponent('NewProject', () => NewProject);

@@ -1,41 +1,20 @@
 'use strict';
 
-/*eslint-disable no-unused-vars*/
 import React, {
     Text,
     View,
     TextInput,
     TouchableHighlight,
-    StyleSheet,
-    Component
+    Component,
 } from 'react-native';
-var Progress = require('react-native-progress');
-var buffer = require('buffer');
 
-/*eslint-enable no-unused-vars*/
+import Progress from 'react-native-progress';
+import buffer from 'buffer';
 
-const styles = StyleSheet.create({
-    button : {
-        backgroundColor: '#e9eaed',
-        height: 50,
-        alignSelf: 'stretch',
-        justifyContent : 'center',
-        marginTop: 10
-    },
-    buttonText: {
-        fontSize: 20,
-        alignSelf: 'center'
-    },
-    heading : {
-        fontSize : 30
-    },
-    input : {
-        height: 50,
-        marginTop: 1
-    }
-});
+import styles from './style/auth_menu_style'
 
 class Authorization extends Component {
+
   constructor(props) {
         super(props);
 
@@ -46,11 +25,11 @@ class Authorization extends Component {
 
     render() {
         return (
-            <View style={{ flex:1, padding: 30 }}>
-                <View style={{ flex:2, alignItems:'center', justifyContent:'center' }}>
+            <View style={styles.authBox}>
+                <View style={styles.title}>
                     <Text style={styles.heading}>Authorization Menu</Text>
                 </View>
-                <View style={{ flex:5 }}>
+                <View style={{ flex: 5 }}>
                     <TextInput
                         onChangeText={(text) => this.setState({ username: text })}
                         style={styles.input}
@@ -63,7 +42,6 @@ class Authorization extends Component {
                     <TouchableHighlight style={styles.button} onPress={this.onLoginPress.bind(this)}>
                         <Text style={ styles.buttonText }>Log In</Text>
                     </TouchableHighlight>
-
                     <View>{this.state.progressBar}</View>
                 </View>
             </View>
@@ -71,7 +49,12 @@ class Authorization extends Component {
     }
 
     onLoginPress() {
-        this.setState({ progressBar: <Progress.Circle size={30} indeterminate={true} borderWidth={2} style={{ alignItems : 'center', padding: 10 }}/> });
+        this.setState({ progressBar: <Progress.Circle size={30}
+                                                      indeterminate={true}
+                                                      borderWidth={2}
+                                                      style={styles.progressBar}/>
+        });
+
         var buf = new buffer.Buffer(this.state.username + ':' + this.state.password);
         var encodedAuth = buf.toString('base64');
         console.log(encodedAuth);
@@ -92,19 +75,18 @@ class Authorization extends Component {
         then((response) => response.json()).
         then((results) => {
             console.log(results);
+            this.props.navigator.push({
+                view_id: 1
+            })
           }
         ).
-          catch((err) => this.setState(err)
+          catch((err) => {this.setState(err); console.log(err)}
         ).
           finally(() => {
-                this.setState({progressBar: null});
-                this.props.navigator.push({
-                    view_id: 1
-                })
+                this.setState({ progressBar: null });
             }
         )
     }
-
 }
 
 module.exports = Authorization;

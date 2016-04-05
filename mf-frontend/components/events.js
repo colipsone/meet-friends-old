@@ -4,7 +4,6 @@ import React, {
     AppRegistry,
     Component,
     Image,
-    StyleSheet,
     Text,
     View,
     ProgressBarAndroid,
@@ -13,7 +12,9 @@ import React, {
     TouchableHighlight
 } from 'react-native';
 
-var EventsService = require('./services/eventsService');
+import styles from './style/events_style'
+
+var EventsService = require('./../services/eventsService');
 var eventsService = new EventsService();
 
 var Events = React.createClass({
@@ -66,13 +67,15 @@ var Events = React.createClass({
     renderEventList(event) {
         return (
             <TouchableHighlight
-                onPress={() => {this.props.navigator.push({
+                onPress={() => {
+                    this.props.navigator.push({
                     event_id : event.event_id,
                     view_id : 2
-                })}}>
+                }) }
+                }>
                 <View style={styles.container}>
                     <Image
-                source={{uri: eventsService.serverApiBaseUrl + event.photoUrl}}
+                        source={{ uri: eventsService.serverApiBaseUrl + event.photoUrl }}
                         style={styles.thumbnail}
                     />
                     <View style={styles.leftContainer}>
@@ -95,11 +98,11 @@ var Events = React.createClass({
                         </Text>
                         <View style={styles.iconRow}>
                             <Image
-                        source={{uri: eventsService.serverApiBaseUrl + event.photoUrl}}
+                                source={{ uri: eventsService.serverApiBaseUrl + event.photoUrl }}
                                 style={styles.icon}
                             />
                             <Image
-                                source={{uri: eventsService.serverApiBaseUrl + event.photoUrl}}
+                                source={{ uri: eventsService.serverApiBaseUrl + event.photoUrl }}
                                 style={styles.icon}
                             />
                         </View>
@@ -109,7 +112,7 @@ var Events = React.createClass({
         )
     },
     renderLoadingView() {
-        return(
+        return (
             <View style={styles.container}>
                 <Text>
                     Loading events...
@@ -117,118 +120,6 @@ var Events = React.createClass({
             </View>
         )
     }
-});
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-        borderWidth: 1,
-        borderColor: '#d4d4d4'
-    },
-    spinner: {
-        opacity: 1
-    },
-    thumbnail: {
-        width: 50,
-        height: 50,
-        borderRadius: 30
-    },
-    leftContainer: {
-        flex: 4
-    },
-    userName: {
-        textAlign: 'left',
-        marginTop: 10,
-        marginLeft: 10,
-        fontWeight: 'bold',
-        fontSize: 14,
-        color: "#424242"
-    },
-    title: {
-        fontSize: 13,
-        textAlign: 'left',
-        marginLeft: 10,
-        marginTop: 5,
-        color: "#464646"
-    },
-    date: {
-        fontSize: 9,
-        textAlignVertical : 'top',
-        marginRight : 10
-    },
-    description: {
-        fontSize: 11,
-        textAlign: 'left',
-        marginLeft: 10,
-        marginTop: 5,
-        color: "#464646"
-    },
-    partyType: {
-        fontStyle: 'italic',
-        fontSize: 11,
-        textAlign: 'left',
-        marginLeft: 10,
-        marginTop: 5,
-        marginBottom: 5
-    },
-    icon : {
-        width: 15,
-        height: 15,
-        borderRadius: 30,
-        marginTop: 10,
-        marginLeft: 10
-    },
-    iconRow : {
-        flex: 1,
-        flexDirection: 'row'
-    },
-    rightContainer : {
-        flex: 1
-    },
-    eventTitle : {
-        backgroundColor: '#f1f1f1',
-        textAlign : 'center',
-        fontSize: 30,
-        color: "#464646"
-    },
-    topContainer : {
-        marginTop: 10,
-        marginLeft : 20,
-        marginBottom : 10,
-        marginRight : 20,
-        height:30,
-        flexDirection: 'row',
-    },
-    button_right : {
-        backgroundColor: '#f7f7f7',
-        flex: 1,
-        borderRadius: 4,
-        paddingTop: 5,
-    },
-    button_left : {
-        backgroundColor: '#0aa494',
-        flex: 1,
-        borderRadius: 4,
-        paddingTop: 5,
-    },
-    button_text_left : {
-        textAlign : 'center',
-        color : 'white'
-    },
-    button_text_right : {
-        textAlign : 'center',
-    },
-    scrollViewTop : {
-    },
-    scrollView : {
-        flex : 1,
-        backgroundColor: '#0aa494',
-    }
-
 });
 
 module.exports = Events;

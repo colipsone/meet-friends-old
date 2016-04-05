@@ -28,6 +28,7 @@ module.exports = function (app) {
         users.forEach(function (user) {
             User.findOrCreate({where: { email: user.email }}, user, function(err, dbUser) {
                 if (err) throw err;
+                console.log(dbUser);
                 dbUser.events.create({
                     from: '4/3/2016',
                     title: 'Test event',

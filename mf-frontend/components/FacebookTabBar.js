@@ -104,7 +104,7 @@ var FacebookTabBar = React.createClass({
                 <View style={[styles.tabs, this.props.style]}>
                     {this.props.tabs.map((tab, item) => this.renderTabOption(tab, item))}
                 </View>
-                <Animated.View style={[tabUnderlineStyle, {left}]} />
+                <Animated.View style={[tabUnderlineStyle, { left }]} />
             </View>
         );
     },
