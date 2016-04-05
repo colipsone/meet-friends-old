@@ -52,22 +52,22 @@ var EventDetails = new React.createClass({
                 <View style={styles.topMenu}>
                     <Text>{this.props.event_id}</Text>
                     <Image
-                        source={{uri: MOKED_DATA[this.props.event_id - 1].userImage.thumbnail}}
+                        source={{ uri: MOKED_DATA[this.props.event_id - 1].userImage.thumbnail }}
                         style={styles.thumbnail}
                     />
                     <Text style={styles.userName}>{MOKED_DATA[this.props.event_id - 1].userName}</Text>
                     <View style={styles.iconRow}>
                         <Image
-                            source={{uri: MOKED_DATA[this.props.event_id - 1].userImage.starIcon}}
+                            source={{ uri: MOKED_DATA[this.props.event_id - 1].userImage.starIcon }}
                             style={styles.icon}
                         />
                         <Image
-                            source={{uri: icon}}
+                            source={{ uri: icon }}
                             style={styles.icon}
                         />
                         <TouchableHighlight onPress={this._handlePress}>
                             <Image
-                                source={{uri: icon2}}
+                                source={{ uri: icon2 }}
                                 style={styles.icon}
                             />
                         </TouchableHighlight>
@@ -84,7 +84,7 @@ var EventDetails = new React.createClass({
                 <View style={styles.singed}>
                     <Text style={styles.label}>SINGED IN</Text>
                     <Image
-                        source={{uri: icon}}
+                        source={{ uri: icon }}
                         style={styles.thumbnail}
                     />
                 </View>
@@ -107,14 +107,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         paddingLeft : 40,
         paddingTop : 40,
-        paddingRight: 40,
+        paddingRight: 40
     },
     singed : {
         flex : 2,
         backgroundColor: '#ffffff',
         paddingLeft : 40,
         paddingTop : 40,
-        paddingRight: 40,
+        paddingRight: 40
     },
     container : {
         flex : 1
@@ -130,11 +130,11 @@ const styles = StyleSheet.create({
         width: 20,
         height: 20,
         marginTop: 30,
-        marginLeft: 20,
+        marginLeft: 20
     },
     iconRow : {
         flexDirection: 'row',
-        flex : 1,
+        flex : 1
     },
     userName: {
         flex:1,
