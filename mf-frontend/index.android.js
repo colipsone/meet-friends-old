@@ -46,6 +46,7 @@ var NewProject = React.createClass({
   },
   render : function() {
       return (
+
            <ScrollableTabView tabBarPosition={"bottom"} renderTabBar={() => <FacebookTabBar someProp={'here'} />}>
               <Navigator tabLabel="bag"
                   initialRoute={{ view_id: 0 }}

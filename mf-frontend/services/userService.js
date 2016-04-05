@@ -36,7 +36,7 @@ class UserService extends ServiceBase {
     }*/
 
     authorize() {
-        return new Promise((resolve, reject) => {
+        return Promise((resolve, reject) => {
             //TODO: Add logic to authorize user
             this._currentUser = {
                 isAuthorized: true
